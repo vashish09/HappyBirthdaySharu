@@ -30,20 +30,11 @@
         }
 
         @keyframes gradientFlow {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        /* Enhanced Sparkle Effect */
         .magic-sparkles {
             position: fixed;
             top: 0;
@@ -54,31 +45,6 @@
             z-index: 1;
         }
 
-        .sparkle {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            animation: twinkle var(--duration, 4s) ease-in-out infinite;
-            opacity: 0;
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-
-            50% {
-                opacity: 0.8;
-                transform: scale(1);
-            }
-        }
-
-        /* Generate 50 sparkles with different positions and animations */
         .magic-sparkles::before,
         .magic-sparkles::after {
             content: '';
@@ -97,16 +63,10 @@
         }
 
         @keyframes sparkleLayer {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(-50px);
-            }
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50px); }
         }
 
-        /* Floating Hearts */
         .floating-hearts {
             position: fixed;
             width: 100%;
@@ -124,16 +84,10 @@
         }
 
         @keyframes floatHeart {
-            0% {
-                transform: translate(0, 100vh) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(var(--translate-x, 0), -100vh) rotate(360deg);
-            }
+            0% { transform: translate(0, 100vh) rotate(0deg); }
+            100% { transform: translate(var(--translate-x, 0), -100vh) rotate(360deg); }
         }
 
-        /* Welcome Section */
         .welcome {
             text-align: center;
             padding: 4rem 2rem;
@@ -157,7 +111,6 @@
             animation: fadeIn 2s ease 0.5s both;
         }
 
-        /* Enhanced Memory Cards */
         .memory-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -226,7 +179,6 @@
             color: #666;
         }
 
-        /* Final Message Section */
         .final-message {
             text-align: center;
             padding: 4rem 2rem;
@@ -246,15 +198,8 @@
         }
 
         @keyframes heartbeat {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
 
         .final-message p {
@@ -285,84 +230,39 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
-        /* Animations */
         @keyframes fadeInScale {
-            0% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
         }
 
         @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-        /* Generate Hearts */
-        .js-generate-hearts {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.4); }
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(45deg, #ff69b4, #da70d6);
             border-radius: 6px;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .welcome h1 {
-                font-size: 3rem;
-            }
-
-            .memory-container {
-                grid-template-columns: 1fr;
-            }
-
-            .final-message h2 {
-                font-size: 2.5rem;
-            }
+            .welcome h1 { font-size: 3rem; }
+            .memory-container { grid-template-columns: 1fr; }
+            .final-message h2 { font-size: 2.5rem; }
         }
     </style>
 </head>
 
 <body>
     <div class="magic-sparkles"></div>
+
     <div class="floating-hearts">
-        <!-- Hearts will be generated via CSS -->
         <div class="heart" style="--float-duration: 6s; --delay: 0s; --translate-x: 20px;">💝</div>
         <div class="heart" style="--float-duration: 8s; --delay: 1s; --translate-x: -30px;">💖</div>
         <div class="heart" style="--float-duration: 7s; --delay: 2s; --translate-x: 40px;">💗</div>
@@ -377,23 +277,58 @@
 
     <div class="memory-container">
         <div class="memory-card">
-            <img src="./d1.jpg" alt="First Date" class="memory-img">
-            <div class="memory-date">Her Smile Says It All</div>
-            <div class="memory-caption">You’re truly one of the sweetest girls I know, and I feel lucky to have a sis
-                like you.❤️</div>
-        </div>
-        <div class="memory-card">
-            <img src="./d2.jpg" alt="Beach Day" class="memory-img">
-            <div class="memory-date">Together Vibes</div>
-            <div class="memory-caption">May your journey ahead be filled with happiness, success, and endless
-                smiles.😊💕</div>
-        </div>
-        <div class="memory-card">
-            <img src="./d3.jpg" alt="Movie Night" class="memory-img">
-            <div class="memory-date">Pretty Soul</div>
-            <div class="memory-caption">Keep being the amazing person you are—you make every moment brighter.🌸💖</div>
+            <img src="./d1.jpg" alt="Memory 1" class="memory-img">
+            <div class="memory-date">Softest Smile</div>
+            <div class="memory-caption">Your smile is my favorite kind of sunshine—pure and calming. 💗</div>
         </div>
 
+        <div class="memory-card">
+            <img src="./d2.jpg" alt="Memory 2" class="memory-img">
+            <div class="memory-date">My Comfort Person</div>
+            <div class="memory-caption">With you, even silence feels sweet. Always grateful for you. 💕</div>
+        </div>
+
+        <div class="memory-card">
+            <img src="./d3.jpg" alt="Memory 3" class="memory-img">
+            <div class="memory-date">Golden Heart</div>
+            <div class="memory-caption">So kind, so lovely—your heart makes everything feel better. 🌸💖</div>
+        </div>
+
+        <div class="memory-card">
+            <img src="./d4.jpg" alt="Memory 4" class="memory-img">
+            <div class="memory-date">Little Moments, Big Heart</div>
+            <div class="memory-caption">The way you care is rare… and it makes everything feel warm. 💗</div>
+        </div>
+
+        <div class="memory-card">
+            <img src="./d5.jpg" alt="Memory 5" class="memory-img">
+            <div class="memory-date">Just Us Being Us</div>
+            <div class="memory-caption">Even simple moments with you feel special. Always my favorite vibe. 💕</div>
+        </div>
+
+        <div class="memory-card">
+            <img src="./d6.jpg" alt="Memory 6" class="memory-img">
+            <div class="memory-date">Sunshine Energy</div>
+            <div class="memory-caption">You light up every room you walk into—soft, sweet, and bright. ✨</div>
+        </div>
+
+        <div class="memory-card">
+            <img src="./d7.jpg" alt="Memory 7" class="memory-img">
+            <div class="memory-date">Forever Proud of You</div>
+            <div class="memory-caption">Watching you grow and glow is my favorite thing. Keep shining, always. ����</div>
+        </div>
+
+        <div class="memory-card">
+            <img src="./d8.jpg" alt="Memory 8" class="memory-img">
+            <div class="memory-date">A Heart Like Yours</div>
+            <div class="memory-caption">So pure, so kind—your heart is genuinely beautiful. I’m lucky. 💖</div>
+        </div>
+
+        <div class="memory-card">
+            <img src="./d9.jpg" alt="Memory 9" class="memory-img">
+            <div class="memory-date">My Sweetest Wish</div>
+            <div class="memory-caption">May life give you the love you deserve, today and every day. 💝</div>
+        </div>
     </div>
 
     <section class="final-message">
@@ -402,7 +337,9 @@
             I’m so grateful for the bond we have, and for the positivity you always bring into my life.<br>
             On your birthday, I just wish for endless happiness, love, and success to come your way.🌸</p>
         <p>You deserve all the joy in the world—keep shining and spreading your beautiful energy.✨</p>
-        <a href="#" class="goodbye-btn">Until We Meet Again 💝</a>
+
+        <!-- goes back to first page -->
+        <a href="./index.html" class="goodbye-btn">Until We Meet Again 💝</a>
     </section>
 </body>
 
