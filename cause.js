@@ -1,12 +1,12 @@
 // Reasons database
 const reasons = [
     { 
-        text: "Your smile can fix a bad mood in seconds". 💖", 
+        text: "Your smile can fix a bad mood in seconds. 💖", 
         emoji: "🌟",
         gif: "gif1.gif"
     },
     { 
-        text: "You always make people feel included and cared for". 🌸 ", 
+        text: "You always make people feel included and cared for. 🌸", 
         emoji: "💗",
         gif: "gif2.gif"
     },
@@ -16,7 +16,7 @@ const reasons = [
         gif: "gif1.gif"
     },
     { 
-        text: "Your vibe is pure comfort — calm when needed, crazy-fun when needed, and always sweet. Being around you feels like home, honestly.", 🥳 ", 
+        text: "Your vibe is pure comfort — calm when needed, crazy-fun when needed, and always sweet. Being around you feels like home, honestly. 🥳", 
         emoji: "🌟",
         gif: "gif2.gif"
     }
@@ -80,7 +80,8 @@ function displayNewReason() {
                     shuffleButton.textContent = "Beautiful Memories ✨";
                     shuffleButton.classList.add('story-mode');
 
-                    shuffleButton.addEventListener('click', () => {
+                    // Avoid stacking multiple click listeners
+                    shuffleButton.onclick = () => {
                         gsap.to('body', {
                             opacity: 0,
                             duration: 1,
@@ -88,7 +89,7 @@ function displayNewReason() {
                                 window.location.href = 'last.html';
                             }
                         });
-                    });
+                    };
                 }
             });
         }
