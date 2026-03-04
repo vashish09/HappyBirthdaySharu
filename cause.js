@@ -1,5 +1,5 @@
- // Reasons database
- const reasons = [
+// Reasons database
+const reasons = [
     { 
         text: "You’re such a kind and wonderful person, and I feel lucky to share such a good bond with you. 💖", 
         emoji: "🌟",
@@ -76,14 +76,16 @@ function displayNewReason() {
                 duration: 0.5,
                 ease: "elastic.out",
                 onComplete: () => {
-                    shuffleButton.textContent = "Enter Our Storylane 💫";
+                    // UPDATED BUTTON NAME HERE:
+                    shuffleButton.textContent = "Beautiful Memories ✨";
                     shuffleButton.classList.add('story-mode');
+
                     shuffleButton.addEventListener('click', () => {
                         gsap.to('body', {
                             opacity: 0,
                             duration: 1,
                             onComplete: () => {
-                                window.location.href = 'last.html'; // Replace with the actual URL of the next page
+                                window.location.href = 'last.html';
                             }
                         });
                     });
@@ -98,9 +100,7 @@ function displayNewReason() {
             isTransitioning = false;
         }, 500);
     } else {
-        // Handle navigation to new page or section
         window.location.href = "#storylane";
-        // Or trigger your next page functionality
     }
 }
 
@@ -115,7 +115,7 @@ shuffleButton.addEventListener('click', () => {
     displayNewReason();
 });
 
-// Floating elements function (same as before)
+// Floating elements function
 function createFloatingElement() {
     const elements = ['🌸', '✨', '💖', '🦋', '⭐'];
     const element = document.createElement('div');
@@ -134,7 +134,7 @@ function createFloatingElement() {
     });
 }
 
-// Custom cursor (same as before)
+// Custom cursor
 const cursor = document.querySelector('.custom-cursor');
 document.addEventListener('mousemove', (e) => {
     gsap.to(cursor, {
