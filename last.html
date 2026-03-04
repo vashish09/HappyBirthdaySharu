@@ -8,11 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;400;500;600&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             min-height: 100vh;
@@ -37,10 +33,8 @@
 
         .magic-sparkles {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             pointer-events: none;
             z-index: 1;
         }
@@ -49,8 +43,7 @@
         .magic-sparkles::after {
             content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             background-image: radial-gradient(circle, white 1px, transparent 1px);
             background-size: 50px 50px;
             animation: sparkleLayer 8s linear infinite;
@@ -69,8 +62,7 @@
 
         .floating-hearts {
             position: fixed;
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             pointer-events: none;
             z-index: 2;
         }
@@ -140,18 +132,14 @@
         .memory-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             transform: translateX(-100%);
             transition: 0.5s;
         }
 
-        .memory-card:hover::before {
-            transform: translateX(100%);
-        }
+        .memory-card:hover::before { transform: translateX(100%); }
 
         .memory-img {
             width: 100%;
@@ -162,9 +150,7 @@
             transition: transform 0.5s ease;
         }
 
-        .memory-card:hover .memory-img {
-            transform: scale(1.05);
-        }
+        .memory-card:hover .memory-img { transform: scale(1.05); }
 
         .memory-date {
             font-family: 'Dancing Script', cursive;
@@ -246,10 +232,7 @@
 
         ::-webkit-scrollbar { width: 12px; }
         ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.4); }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, #ff69b4, #da70d6);
-            border-radius: 6px;
-        }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(45deg, #ff69b4, #da70d6); border-radius: 6px; }
 
         @media (max-width: 768px) {
             .welcome h1 { font-size: 3rem; }
@@ -275,6 +258,7 @@
         <p>Every moment spent with you has been magical. Let's cherish these precious memories ...</p>
     </section>
 
+    <!-- IMPORTANT: Here are ALL 9 frames -->
     <div class="memory-container">
         <div class="memory-card">
             <img src="./d1.jpg" alt="Memory 1" class="memory-img">
@@ -315,7 +299,7 @@
         <div class="memory-card">
             <img src="./d7.jpg" alt="Memory 7" class="memory-img">
             <div class="memory-date">Forever Proud of You</div>
-            <div class="memory-caption">Watching you grow and glow is my favorite thing. Keep shining, always. ����</div>
+            <div class="memory-caption">Watching you grow and glow is my favorite thing. Keep shining, always. 🌸</div>
         </div>
 
         <div class="memory-card">
